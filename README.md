@@ -17,7 +17,8 @@ A Claude Code plugin that transforms your workflow to use persistent markdown fi
 [![Claude Code Skill](https://img.shields.io/badge/Claude%20Code-Skill-green)](https://code.claude.com/docs/en/skills)
 [![Cursor Skills](https://img.shields.io/badge/Cursor-Skills-purple)](https://docs.cursor.com/context/skills)
 [![Kilocode Skills](https://img.shields.io/badge/Kilocode-Skills-orange)](https://kilo.ai/docs/agent-behavior/skills)
-[![Version](https://img.shields.io/badge/version-2.6.0-brightgreen)](https://github.com/OthmanAdi/planning-with-files/releases)
+[![Gemini CLI](https://img.shields.io/badge/Gemini%20CLI-Skills-4285F4)](https://geminicli.com/docs/cli/skills/)
+[![Version](https://img.shields.io/badge/version-2.7.0-brightgreen)](https://github.com/OthmanAdi/planning-with-files/releases)
 [![SkillCheck Validated](https://img.shields.io/badge/SkillCheck-Validated-4c1)](https://getskillcheck.com)
 
 ## Quick Install
@@ -52,6 +53,7 @@ See [docs/installation.md](docs/installation.md) for all installation methods.
 | IDE | Status | Installation Guide | Format |
 |-----|--------|-------------------|--------|
 | Claude Code | ✅ Full Support | [Installation](docs/installation.md) | Plugin + SKILL.md |
+| Gemini CLI | ✅ Full Support | [Gemini Setup](docs/gemini.md) | Agent Skills |
 | Cursor | ✅ Full Support | [Cursor Setup](docs/cursor.md) | Skills |
 | Kilocode | ✅ Full Support | [Kilocode Setup](docs/kilocode.md) | Skills |
 | OpenCode | ✅ Full Support | [OpenCode Setup](docs/opencode.md) | Personal/Project Skill |
@@ -69,6 +71,7 @@ See [docs/installation.md](docs/installation.md) for all installation methods.
 | [Quick Start](docs/quickstart.md) | 5-step guide to using the pattern |
 | [Workflow Diagram](docs/workflow.md) | Visual diagram of how files and hooks interact |
 | [Troubleshooting](docs/troubleshooting.md) | Common issues and solutions |
+| [Gemini CLI Setup](docs/gemini.md) | Google Gemini CLI integration guide |
 | [Cursor Setup](docs/cursor.md) | Cursor IDE-specific instructions |
 | [Windows Setup](docs/windows.md) | Windows-specific notes |
 | [Kilo Code Support](docs/kilocode.md) | Kilo Code integration guide |
@@ -81,7 +84,8 @@ See [docs/installation.md](docs/installation.md) for all installation methods.
 
 | Version | Features | Install |
 |---------|----------|---------|
-| **v2.6.0** (current) | Start command (`/planning-with-files:start`), path resolution fix | `claude plugins install OthmanAdi/planning-with-files` |
+| **v2.7.0** (current) | Gemini CLI support | `claude plugins install OthmanAdi/planning-with-files` |
+| **v2.6.0** | Start command (`/planning-with-files:start`), path resolution fix | See [releases](https://github.com/OthmanAdi/planning-with-files/releases) |
 | **v2.5.0** | Fixed autocomplete - SKILL.md matches Anthropic format | See [releases](https://github.com/OthmanAdi/planning-with-files/releases) |
 | **v2.3.0** | Codex & OpenCode IDE support | See [releases](https://github.com/OthmanAdi/planning-with-files/releases) |
 | **v2.2.2** | Restored skill activation language | See [releases](https://github.com/OthmanAdi/planning-with-files/releases) |
@@ -203,6 +207,7 @@ planning-with-files/
 │   ├── quickstart.md
 │   ├── workflow.md
 │   ├── troubleshooting.md
+│   ├── gemini.md            # Gemini CLI setup
 │   ├── cursor.md
 │   ├── windows.md
 │   ├── kilocode.md
@@ -223,15 +228,18 @@ planning-with-files/
 │           ├── check-complete.sh
 │           ├── init-session.ps1   # Windows PowerShell
 │           └── check-complete.ps1 # Windows PowerShell
-├── .codex/                  # Codex IDE installation guide
-│   └── INSTALL.md
-├── .opencode/               # OpenCode IDE installation guide
-│   └── INSTALL.md
+├── .gemini/                 # Gemini CLI skills
+│   └── skills/
+│       └── planning-with-files/
+├── .codex/                  # Codex IDE skills
+│   └── skills/
+├── .opencode/               # OpenCode IDE skills
+│   └── skills/
 ├── .claude-plugin/          # Plugin manifest
-├── .cursor/                 # Cursor rules
-├── .kilocode/               # Kilo Code rules
-│   └── rules/
-│       └── planning-with-files.md
+├── .cursor/                 # Cursor skills
+│   └── skills/
+├── .kilocode/               # Kilo Code skills
+│   └── skills/
 ├── CHANGELOG.md
 ├── LICENSE
 └── README.md

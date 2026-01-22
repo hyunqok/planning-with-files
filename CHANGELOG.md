@@ -2,6 +2,30 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2.7.0] - 2026-01-22
+
+### Added
+
+- **Gemini CLI Support** (Issue #52)
+  - Native Agent Skills support for Google Gemini CLI v0.23+
+  - Created `.gemini/skills/planning-with-files/` directory structure
+  - SKILL.md formatted for Gemini CLI compatibility
+  - Full templates, scripts, and references included
+  - Added `docs/gemini.md` installation guide
+  - Added Gemini CLI badge to README
+
+### Documentation
+
+- Updated README with Gemini CLI in supported IDEs table
+- Updated file structure diagram
+- Added Gemini CLI to documentation table
+
+### Thanks
+
+- @airclear for requesting Gemini CLI support (Issue #52)
+
+---
+
 ## [2.6.0] - 2026-01-22
 
 ### Added
