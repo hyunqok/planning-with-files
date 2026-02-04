@@ -27,9 +27,11 @@ A Claude Code plugin that transforms your workflow to use persistent markdown fi
 
 ## Quick Install
 
-```bash
-# Install the plugin
-claude plugins install OthmanAdi/planning-with-files
+In Claude Code, run:
+
+```
+/plugin marketplace add OthmanAdi/planning-with-files
+/plugin install planning-with-files@planning-with-files
 ```
 
 That's it! Now use one of these commands in Claude Code:
@@ -41,17 +43,13 @@ That's it! Now use one of these commands in Claude Code:
 
 **Alternative:** If you want `/planning-with-files` (without prefix), copy skills to your local folder:
 
+**macOS/Linux:**
 ```bash
-# Optional: Copy skills for /planning-with-files command
 cp -r ~/.claude/plugins/cache/planning-with-files/planning-with-files/*/skills/planning-with-files ~/.claude/skills/
 ```
 
 **Windows (PowerShell):**
 ```powershell
-# Install the plugin
-claude plugins install OthmanAdi/planning-with-files
-
-# Optional: Copy skills for /planning-with-files command
 Copy-Item -Recurse -Path "$env:USERPROFILE\.claude\plugins\cache\planning-with-files\planning-with-files\*\skills\planning-with-files" -Destination "$env:USERPROFILE\.claude\skills\"
 ```
 
@@ -105,7 +103,7 @@ See [docs/installation.md](docs/installation.md) for all installation methods.
 
 | Version | Features | Install |
 |---------|----------|---------|
-| **v2.14.0** (current) | Pi Agent support, OpenClaw docs update, Codex path fix | `claude plugins install OthmanAdi/planning-with-files` |
+| **v2.14.0** (current) | Pi Agent support, OpenClaw docs update, Codex path fix | `/plugin install planning-with-files@planning-with-files` |
 | **v2.13.0** | Moltbot rebrand (formerly Clawd CLI) | See [releases](https://github.com/OthmanAdi/planning-with-files/releases) |
 | **v2.12.0** | AdaL CLI / Sylph AI support | See [releases](https://github.com/OthmanAdi/planning-with-files/releases) |
 | **v2.11.0** | `/plan` command for easier autocomplete | See [releases](https://github.com/OthmanAdi/planning-with-files/releases) |
